@@ -21,7 +21,8 @@ export const Car = () => {
 
         <em>VIN: {car.vin}</em>
         <div>Цвет: {car.color}</div>
-        <div>Год: {JSON.stringify(car.year)}</div>
+        <div>Год: {car.year}</div>
+        <div>Модель: {car.model}</div>
 
         <hr />
 
