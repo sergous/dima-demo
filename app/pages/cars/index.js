@@ -64,8 +64,12 @@ const CarsPage = () => {
 
       <div>
         <p>
+          <Link href="/">
+            <button className="button small">Главная</button>
+          </Link>
+          <br />
           <Link href={Routes.NewCarPage()}>
-            <a>Create Car</a>
+            <button className="button small">Create Car</button>
           </Link>
         </p>
 
@@ -73,6 +77,37 @@ const CarsPage = () => {
           <CarsList />
         </Suspense>
       </div>
+      <style>
+        <style jsx global>{`
+          .button {
+            font-size: 1rem;
+            background-color: #6700eb;
+            padding: 1rem 2rem;
+            color: #f4f4f4;
+            text-align: center;
+          }
+
+          .button.small {
+            padding: 0.5rem 1rem;
+          }
+
+          .button:hover {
+            background-color: #45009d;
+          }
+
+          .button-outline {
+            border: 2px solid #6700eb;
+            padding: 1rem 2rem;
+            color: #6700eb;
+            text-align: center;
+          }
+
+          .button-outline:hover {
+            border-color: #45009d;
+            color: #45009d;
+          }
+        `}</style>
+      </style>
     </>
   )
 }
